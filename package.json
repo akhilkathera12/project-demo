@@ -38,8 +38,17 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node",
     "rootDir": "./services",
+    "coveragePathIgnorePatterns": [
+            "/node_modules/"
+        ],
     "roots": [
       "../test"
-    ]
-  }
+    ],
+    "testResultsProcessor":  "jest-sonar-reporter"
+  },
+  "jestSonar": {
+        "reportPath":  "coverage",
+        "reportFile":  "test-reporter.xml",
+        "indent":  4
+    }
 }
